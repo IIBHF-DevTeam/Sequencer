@@ -3,7 +3,7 @@ return {
     {
         Time = 1,
         PlayLocalAudio = {"Test.Keycard"},
-        Warning = {"HAiiii"},
+        Warning = {"Hiiii"},
         EventCode = function() print(" Starting new Sequence") end
     },
     {

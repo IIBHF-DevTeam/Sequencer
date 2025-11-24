@@ -20,7 +20,6 @@ function Sequencer.NewMacro(name: string, code: ({any}) -> ())
 end
 
 local function RegisterMacro(macro: Macro)
-    print(HttpService:JSONEncode(macro))
     table.insert(macros, macro)
 end
 
@@ -41,7 +40,6 @@ function Sequencer.RunSequence(sequence: Instance, MacroScript: Instance & nil)
     elseif game:GetService("ReplicatedStorage"):WaitForChild("Data", 0.1):WaitForChild("Macros", 0.1) ~= nil then
         RegisterMarcrosFromModuleScript(game:GetService("ReplicatedStorage").Data.Macros)
     end
-    print(HttpService:JSONEncode(macros))
     local counter = 0
     local lasteventtime = 0
     local lasteventname
@@ -65,7 +63,6 @@ function Sequencer.RunSequence(sequence: Instance, MacroScript: Instance & nil)
                         for _, macrolist in ipairs(macros) do
                             if v[macrolist.name] ~= nil then
                                 macrolist.code(v[macrolist.name])
-                                print("Running marco "..macrolist.name)
                             end
                         end
                         if v.EventCode ~= nil then
@@ -74,7 +71,6 @@ function Sequencer.RunSequence(sequence: Instance, MacroScript: Instance & nil)
                         lasteventtime = v.Time
                         if v.EventName ~= nil then
                             lasteventname = v.EventName
-                            print(v.EventName)
                         end
                     end
                 end
@@ -82,12 +78,10 @@ function Sequencer.RunSequence(sequence: Instance, MacroScript: Instance & nil)
                     if v.PreEvent == nil then
                         error("Sequence that occur after an event must specifiy what event should occur before to properly chain them!")
                     end
-                    print(v.PreEvent.." is the preEvent!")
                     if v.AddTime + lasteventtime == roundedcounter and lasteventname == v.PreEvent then
                         for _, macrolist in ipairs(macros) do
                             if v[macrolist.name] ~= nil then
                                 macrolist.code(v[macrolist.name])
-                                print("Running marco "..macrolist.name)
                             end
                         end
                         if v.EventCode ~= nil then
@@ -105,7 +99,6 @@ function Sequencer.RunSequence(sequence: Instance, MacroScript: Instance & nil)
         end
         counter += 0.1
         task.wait(0.1)
-        print(counter.." rounded to "..roundedcounter)
     end
 end
 
