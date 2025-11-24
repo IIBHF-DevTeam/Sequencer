@@ -9,4 +9,4 @@ sourcemap.json
 
 # Wally stuff
 DevPackages/*
-./wally.lock
+/*.lock
