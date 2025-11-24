@@ -1,5 +1,5 @@
 {
-  "name": "Sequencer",
+  "name": "sequencer",
   "tree": {
     "$path": "./src"
   }
