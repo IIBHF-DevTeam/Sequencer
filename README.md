@@ -1,5 +1,5 @@
 # Sequencer
-A library for running events in a sequence
+A library for running events in a sequence.
 # Setup
 ## Project
 This project uses [Rojo](https://github.com/rojo-rbx/rojo), some Rojo project files are included, 3 to be exact
