@@ -1,9 +1,10 @@
 [package]
 name = "iibhf-devteam/sequencer"
-version = "0.1.1"
+version = "0.1.2"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 description = "A library for running events in a sequence."
+license = "MIT"
 
 [dev-dependencies]
 localaudio = "iitpp-roblox/localaudio@1.5.2"
