@@ -73,4 +73,4 @@ Creates a new macro, ``name`` will be the name of the macro defined in the event
 ``Sequencer.RunSequence(sequence: Instance, MacroScript: Instance & nil)`` Runs a sequence, ``sequence`` is the sequence that you want to run, and ``MacroScript`` is the MacroScript you want to run, defaulting to ``ReplicatedStorage.Data.Macros``
 
 # License
-This project is avaliable under the MIT License. See [LICENSE](https://github.com/IIBHF-DevTeam/iibhf-tester/blob/73cd3c188a9996762f0437f901aaf6f7b86d654d/LICENSE) for details
+This project is avaliable under the MIT License. See [LICENSE](https://github.com/IIBHF-DevTeam/Sequencer/blob/f573cca82b7f2ad9e25f95971f256fdf5d828997/LICENSE) for details
