@@ -15,7 +15,16 @@
         },
         "ReplicatedStorage": {
             "$className": "ReplicatedStorage",
-            "$path": "test/ReplicatedStorage"
+            "$path": "test/ReplicatedStorage",
+            "LocalAudio": {
+                "$path": "./DevPackages/localaudio.lua"
+            },
+            "_Index": {
+                "$path": "./DevPackages/_Index"
+            },
+            "Sequencer": {
+                "$path": "./default.project.json"
+            }
         },    
         "StarterPlayer": {
             "$className": "StarterPlayer",
