@@ -1,0 +1,28 @@
+{
+    "name": "IIBHFTester Test",
+    "tree": {
+        "$className": "DataModel",    
+        "HttpService": {
+            "$className": "HttpService",
+            "$properties": {
+              "HttpEnabled": true
+            }
+        },
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "$ignoreUnknownInstances": true,
+            "$path": "test/ServerScriptService"
+        },
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "$path": "test/ReplicatedStorage"
+        },    
+        "StarterPlayer": {
+            "$className": "StarterPlayer",
+            "StarterPlayerScripts": {
+              "$className": "StarterPlayerScripts",
+              "$path": "test/StarterPlayerScripts"
+            }
+        }
+    }
+}
