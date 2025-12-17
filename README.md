@@ -16,7 +16,7 @@ rojo build {project file you want to use} --output Sequencer.rbxm
 This is an example of a sequence
 
 ### A sequence
-```
+```luau
 return {
     Length = 20,
     {
@@ -46,7 +46,7 @@ return {
 First, this thing calls LocalAudio to play an audio called ``Test.Keycard``, it also prints the phrase "Starting New Sequence", and then also prints a warning in the console saying "Hiiii", Then it waits about 3 seconds, it then makes a new part, and you get the gist.
 
 ### Macros
-```
+```luau
 local Seq = require(game:GetService("ReplicatedStorage").Sequencer)
 return {
     Seq.NewMacro("PlayLocalAudio", function(args)
